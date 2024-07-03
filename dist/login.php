@@ -34,7 +34,8 @@
             box-sizing: border-box;
         }
 
-        .login-form input[type="submit"] {
+        .login-form input[type="submit"],
+        .login-form button {
             width: 100%;
             padding: 10px;
             background-color: pink;
@@ -45,7 +46,8 @@
             border-radius: 3px;
         }
 
-        .login-form input[type="submit"]:hover {
+        .login-form input[type="submit"]:hover,
+        .login-form button:hover {
             background-color: #ff1493; /* Tonalidade mais escura de rosa */
         }
 
@@ -58,12 +60,34 @@
             font-size: 14px;
             margin-top: 5px;
         }
+
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff1493;
+        }
     </style>
 </head>
 <body>
 
 <div class="login-form">
-    <form action="processa_login.php" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <p>Nome de Usuário <input type="text" name="usuario" required></p>
         <p>Senha <input type="password" name="senha" required></p>
         <input type="submit" value="Entrar" name="entrar">

@@ -33,7 +33,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">Mais produtos</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#!">Populares</a></li>
-                            <li><a class="dropdown-item" href="#!">Novos</a></li>
+                            <li><a class="dropdown-item" href='ProdutoImp.php'>Cadastrar Produto</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -48,7 +48,14 @@
                 <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
                         <in class="bi bi-heart-fill me-1"></i>
-                        <a href="login.php">Login</a>
+                        <?php
+                            if(isset($_SESSION['username']) != ''){
+                                echo "<a href=''>Olá, ". $_SESSION['username'] ."!</a>";
+                            } else {
+                                echo "<a href='login.php'>Login</a>";
+                            }
+                        ?>
+                        
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </button>
                 </form>
@@ -102,7 +109,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver opções</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href='ProdutoImp.php'>Ver opções</a>
                             </div>
                         </div>
                     </div>
@@ -171,7 +178,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Cuidados com a pele</h5>
+                                <h5 class="fw-bolder">Sabonete Argila Verde</h5>
                                 <!-- Product reviews-->
                                 <div class="d-flex justify-content-center small text-warning mb-2">
                                     <div class="bi-star-fill"></div>
