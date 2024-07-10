@@ -26,7 +26,7 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">Promoções</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
@@ -68,7 +68,7 @@
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                        src="assets/images/top-view-pink-lipgloss-shade.jpg" alt="..." /></div>
+                        src="assets/images/gloss.png" alt="..." /></div>
                 <div class="col-md-6">
                     <div class="small mb-1">SKU: BST-498</div>
                     <h1 class="display-5 fw-bolder">Gloss Super Brilhoso</h1>
@@ -109,7 +109,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href='ProdutoImp.php'>Ver opções</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href='listarprodutos.php'>Ver opções</a>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Importados</h5>
+                                <h5 class="fw-bolder">Dolce e Gabbana</h5>
                                 <!-- Product reviews-->
                                 <div class="d-flex justify-content-center small text-warning mb-2">
                                     <div class="bi-star-fill"></div>
@@ -135,8 +135,8 @@
                                     <div class="bi-star-fill"></div>
                                 </div>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
+                                <span class="text-muted text-decoration-line-through">$400.00</span>
+                                $299.00
                             </div>
                         </div>
                         <!-- Product actions-->

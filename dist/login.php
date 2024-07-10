@@ -87,7 +87,7 @@
 <body>
 
 <div class="login-form">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form action="index.php" method="post">
         <p>Nome de Usuário <input type="text" name="usuario" required></p>
         <p>Senha <input type="password" name="senha" required></p>
         <input type="submit" value="Entrar" name="entrar">
