@@ -27,12 +27,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listarProdutos.php">Promoções</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Mais produtos</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">Populares</a></li>
+                            <li><a class="dropdown-item" href="listarProdutos.php">Populares</a></li>
                             <li><a class="dropdown-item" href='ProdutoImp.php'>Cadastrar Produto</a></li>
                         </ul>
                     </li>
@@ -152,7 +152,7 @@
                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção Skincare
                         </div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="assets/images/skincare-6664573_1280.jpg" alt="..." />
+                        <img class="card-img-top" src="assets/images/oleorosamosqueta.png" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -173,7 +173,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="assets/images/skincare-6664580_1280.jpg" alt="..." />
+                        <img class="card-img-top" src="assets/images/sabonete.png" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">

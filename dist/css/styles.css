@@ -10825,3 +10825,84 @@ textarea.form-control-lg {
   }
 }
 
+/* Reset de margens e preenchimento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0; /* Removendo margens padrão */
+  padding: 0; /* Removendo padding padrão */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+  width: 80%;
+  max-width: 800px; /* Definindo largura máxima para o contêiner */
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o formulário */
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilos para os campos do formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"] {
+  width: calc(100% - 22px); /* Ajuste para manter a largura consistente */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Evita que o padding afete a largura total */
+}
+
+/* Estilos para o botão de envio */
+.form-group button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-group button:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilos para a mensagem de feedback */
+.mensagem {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+

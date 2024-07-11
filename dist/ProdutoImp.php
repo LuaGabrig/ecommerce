@@ -1,28 +1,30 @@
 <?php
-require_once('conexao.php');
-
+require_once('conexao.php'); // Incluir o arquivo de conexão com o banco de dados
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
     $novoProduto = $_POST['nome'];
-    //$novaDescricao = isset($_POST['descricao']) ? $_POST['descricao'] : ''; // Pode ser vazio se não fornecido
     $novoValor = $_POST['valor'];
-    //$novaImagem = $_POST['imagem']; // Obtém o nome do arquivo da imagem
-    // Move o arquivo da imagem para a pasta desejada (opcional)
-    //$uploadDir = 'assets/images/'; // Diretório onde as imagens serão armazenadas
-    //$uploadFile = $uploadDir . basename($_POST['imagem']);
 
+    // Verifica se o produto já existe
+    $queryVerifica = "SELECT * FROM produtos WHERE nomeProduto = '$novoProduto'";
+    $resultVerifica = $conexao->query($queryVerifica);
 
-    $queryProd = "SELECT * FROM produtos WHERE nome = '$novoProduto'";
-    $execProd = $conexao->query($queryProd);
-    
-    $queryCadastrar = "INSERT INTO produtos (nomeProduto, imagemProduto, precoProduto) VALUES ('$novoProduto', '', '$novoValor')";
-    $queryExcluir = "DELETE INTO produtos (nomeProduto) VALUES ('?')";
-    
-    
+    if ($resultVerifica->num_rows > 0) {
+        echo "Produto já existe!";
+    } else {
+        // Insere o novo produto se ele não existe
+        $queryCadastrar = "INSERT INTO produtos (nomeProduto, imagemProduto, precoProduto) VALUES ('$novoProduto', '', '$novoValor')";
+        
+        if ($conexao->query($queryCadastrar) === TRUE) {
+            echo "<script>alert('Produto adicionado com sucesso!')</script>";
+        } else {
+            echo "Erro ao adicionar produto: " . $conexao->error;
+        }
+    }
 }
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -31,16 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produto</title>
-
-    <div class="container">
-        <h1 class="text-center">Catálogo de Produtos</h1>
-        
     <style>
 
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #ffccdd; /* Cor de fundo rosa claro */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -48,6 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin: 0;
         }
 
+        h2 {
+        text-transform: uppercase;
+        color: #ff1493; /* Cor rosa choque */
+        }
         form {
             background-color: #fff;
             padding: 20px;
@@ -95,7 +97,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<div>
+<h2 class="text-center">CATÁLOGO</h2>
 <label for="nome">Nome do Produto:</label>
     <input type="text" id="nome" name="nome" required><br><br>
     
@@ -106,9 +111,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="file" id="imagem" name="imagem" accept="image/*"><br><br>-->
     
     <input type="submit" value="Cadastrar">
-    <input type="submit" value="Excluir">
+    <a href="excluir.php">Excluir</a>
     <a href="http://localhost:8080/PROJETOFINALPHP/ecommerce/dist/index.php">Voltar</a>
-
+    </div>
 </form>
 
 </body>

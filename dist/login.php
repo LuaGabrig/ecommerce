@@ -7,12 +7,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #ffccdd; /* Cor de fundo rosa claro */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+        }
+        h2  {
+            text-transform: uppercase;
+        color: #ff1493; /* Cor rosa choque */
         }
 
         .login-form {
@@ -87,14 +91,12 @@
 <body>
 
 <div class="login-form">
+    <h2>CADASTRO</h2>
     <form action="index.php" method="post">
         <p>Nome de Usuário <input type="text" name="usuario" required></p>
         <p>Senha <input type="password" name="senha" required></p>
         <input type="submit" value="Entrar" name="entrar">
-    </form>
-</div>
-
-<div class="login-form">
+    </form><br>
     <form action="cadastro.php" method="post">
         <button class="btn btn-rosa btn-block" type="submit">Cadastrar</button>
     </form>
