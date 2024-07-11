@@ -84,8 +84,8 @@
 
     <div class="mensagem">
         <?php
-        if (isset($_GET['mensagem'])) {
-            echo htmlspecialchars($_GET['mensagem']);
+        if (isset($_GET['mensagem!'])) {
+            echo "<script>alert('Produto adicionado com sucesso!')</script>";;
         }
         ?>
     </div>
